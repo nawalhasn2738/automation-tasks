@@ -1,0 +1,82 @@
+{
+  "name": "Task_04",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        -96
+      ],
+      "id": "f26064dd-176e-4cbc-a8da-54d7e760f926",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -208,
+        80
+      ],
+      "id": "01c9d3d4-cc2c-4f11-90e2-7fbec2c1ed64",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        112,
+        -16
+      ],
+      "id": "0c24c7cf-ab72-44ef-a344-91124a17b1fc",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f4b8d0a1-c0db-4161-9217-b0f6eb013ba7",
+  "meta": {
+    "instanceId": "c646926dbfa7f746479199147b1536fe431c21a572711f2ebe5869acd85929ee"
+  },
+  "id": "naC68McE1VLzZuR6",
+  "tags": []
+}
