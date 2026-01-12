@@ -1,0 +1,51 @@
+{
+  "name": "Task_01",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -112,
+        -32
+      ],
+      "id": "fbee8270-bd73-40a9-90a6-766d50c071c1",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        112,
+        -32
+      ],
+      "id": "40cfcdd6-4a09-4828-94f7-409540cb5e02",
+      "name": "Heartbeat_Log"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Heartbeat_Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "dd615f98-7a90-4323-9066-fbdbf34d441a",
+  "meta": {
+    "instanceId": "c646926dbfa7f746479199147b1536fe431c21a572711f2ebe5869acd85929ee"
+  },
+  "id": "O5ePBMowUQV89NMm",
+  "tags": []
+}
