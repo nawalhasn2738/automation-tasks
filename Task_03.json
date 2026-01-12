@@ -1,0 +1,95 @@
+{
+  "name": "Task_03",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        0
+      ],
+      "id": "aad43961-3013-478f-9211-fec06f1d48a8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        16,
+        0
+      ],
+      "id": "04592d28-e098-4e2f-8b60-5d805cff3489",
+      "name": "Invoice entry"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "edc4ec9e-974b-4643-9bf6-3ce5d8785da3",
+      "name": "Invoice audit"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        432,
+        0
+      ],
+      "id": "1c54b9a5-8886-42e7-a850-27b9ce0a2f43",
+      "name": "Final Approval"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Invoice entry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice entry": {
+      "main": [
+        [
+          {
+            "node": "Invoice audit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice audit": {
+      "main": [
+        [
+          {
+            "node": "Final Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c201b09f-6f06-48d9-8238-58d09e3c9dec",
+  "meta": {
+    "instanceId": "c646926dbfa7f746479199147b1536fe431c21a572711f2ebe5869acd85929ee"
+  },
+  "id": "XsL6746RRZjKOOwV",
+  "tags": []
+}
