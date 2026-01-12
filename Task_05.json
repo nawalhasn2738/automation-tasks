@@ -1,0 +1,66 @@
+{
+  "name": "Task_05",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -128,
+        0
+      ],
+      "id": "9aae2ff6-8521-4dcd-b409-76afda549e2f",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "content": "This node logs system stats.",
+        "height": 80,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        64,
+        -96
+      ],
+      "id": "4eb677e9-5b82-424c-9052-da0b0fc3e560",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        80,
+        0
+      ],
+      "id": "bbd86107-8cac-4e4b-ab76-8f8a9b2c7875",
+      "name": "Document_Process"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Document_Process",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5e84ddf2-e2f1-440d-9a05-07b732787870",
+  "meta": {
+    "instanceId": "c646926dbfa7f746479199147b1536fe431c21a572711f2ebe5869acd85929ee"
+  },
+  "id": "XKlwptR9MFvqSsIB",
+  "tags": []
+}
